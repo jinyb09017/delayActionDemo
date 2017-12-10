@@ -5,21 +5,26 @@
 
 典型应用场景：
 
-1、例如我们需要跳转到目标界面之前，进入登录界面，并成功登录后，再进入到目标界面。
+例如我们需要跳转到目标界面之前，进入登录界面，并成功登录后，再进入到目标界面。
 
 那么我们如何实现这种需求呢？请教参我的博客分析[android 登录成功后再跳转到目标界面的思考](http://www.jianshu.com/p/1d0180ec64fb)
 
 
-基本执行流程图如下
+### 1、基本执行流程图如下
+
 ![](http://upload-images.jianshu.io/upload_images/2159256-91dedfb30a1c140c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
 
-2、演示图如下
+### 2、演示图如下
+
+只需要进行登录的验证
 
 ![](./screen/action-login.gif)
 
+只需同时进行登录和优惠券的难
+
 ![](./screen/action-login-dis.gif)
 
-3、代码调用如下
+### 3、代码调用如下
 
 调用目标方法
 ```
@@ -87,7 +92,7 @@ dependencies {
 }
 ```
 
-4、小彩蛋
+### 4、小彩蛋
 
 其实libaction工程也实现了注解调用的实现。但是前提是所有的检验模型不需要传入额外的参数才行。 具体看代码
 
