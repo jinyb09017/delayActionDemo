@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="打开订单详情"
+        android:text="打开订单(登录)"
         android:textSize="20sp" />
 
 
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="打开订单详情(right check)"
+        android:text="打开订单详情(登录 and 优惠)"
         android:textSize="20sp" />
 
     <Button
