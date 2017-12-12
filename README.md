@@ -20,7 +20,7 @@
 
 ![](./screen/action-login.gif)
 
-只需同时进行登录和优惠券的难
+需同时进行登录和优惠券的验证
 
 ![](./screen/action-login-dis.gif)
 
