@@ -5,9 +5,12 @@
 
 典型应用场景：
 
-例如我们需要跳转到目标界面之前，进入登录界面，并成功登录后，再进入到目标界面。
+![](./screen/延迟任务场景.png)
+
 
 那么我们如何实现这种需求呢？请教参我的博客分析[android 登录成功后再跳转到目标界面的思考](http://www.jianshu.com/p/1d0180ec64fb)
+
+
 
 
 ### 1、基本执行流程图如下
@@ -29,15 +32,17 @@
 调用目标方法
 ```
 
-CallUnit.newInstance(MainActivity.this)
-         .addValid(new LoginValid(MainActivity.this))
-         .addValid(new DiscountValid(MainActivity.this))
-         .doCall();
+ SingleCall.getInstance()
+                        .addAction(MainActivity.this)
+                        .addValid(new LoginValid(MainActivity.this))
+                        .addValid(new DiscountValid(MainActivity.this))
+                        .doCall();
+
 ```
 
 完成valid检验后，再执行即可。
 ```
-CallUnit.reCall()
+SingleCall.getInstance().doCall();
 
 ```
 

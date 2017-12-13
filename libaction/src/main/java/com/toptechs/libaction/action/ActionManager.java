@@ -12,6 +12,8 @@ import java.util.Stack;
  * Created by jinyabo on 8/12/2017.
  */
 
+
+@Deprecated
 public class ActionManager {
 
     static ActionManager instance = new ActionManager();

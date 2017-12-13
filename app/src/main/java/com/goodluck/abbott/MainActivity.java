@@ -7,7 +7,7 @@ import android.view.View;
 import com.goodluck.abbott.valid.DiscountValid;
 import com.goodluck.abbott.valid.LoginValid;
 import com.toptechs.libaction.action.Action;
-import com.toptechs.libaction.action.CallUnit;
+import com.toptechs.libaction.action.SingleCall;
 
 public class MainActivity extends AppCompatActivity implements Action {
 
@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity implements Action {
             @Override
             public void onClick(View v) {
 
-                CallUnit.newInstance(MainActivity.this)
+
+                SingleCall.getInstance()
+                        .addAction(MainActivity.this)
                         .addValid(new LoginValid(MainActivity.this))
                         .doCall();
 
@@ -33,7 +35,10 @@ public class MainActivity extends AppCompatActivity implements Action {
             @Override
             public void onClick(View v) {
 
-                CallUnit.newInstance(MainActivity.this)
+
+
+                SingleCall.getInstance()
+                        .addAction(MainActivity.this)
                         .addValid(new LoginValid(MainActivity.this))
                         .addValid(new DiscountValid(MainActivity.this))
                         .doCall();

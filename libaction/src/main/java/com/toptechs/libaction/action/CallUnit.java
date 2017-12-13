@@ -37,6 +37,9 @@ public class CallUnit {
     }
 
 
+    public CallUnit() {
+    }
+
     public CallUnit(Action action) {
         this.action = action;
     }
@@ -70,10 +73,5 @@ public class CallUnit {
         ActionManager.instance().postCallUnit(this);
     }
 
-    /**
-     * recheck all the valid
-     */
-    public static void reCall(){
-        ActionManager.instance().checkValid();
-    }
+
 }

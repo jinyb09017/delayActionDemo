@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.toptechs.libaction.action.CallUnit;
+import com.toptechs.libaction.action.SingleCall;
 
 /**
  * get discount
@@ -35,8 +35,8 @@ public class DiscountActivity extends AppCompatActivity {
 
                 UserConfigCache.setDiscount(DiscountActivity.this, true);
 
-                //这里执行延迟的action方法。
-                CallUnit.reCall();
+                //这里继续
+                SingleCall.getInstance().doCall();
 
                 finish();
             }

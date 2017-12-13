@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.toptechs.libaction.action.CallUnit;
+import com.toptechs.libaction.action.SingleCall;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -32,8 +32,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                 UserConfigCache.setLogin(LoginActivity.this, true);
-                //这里执行延迟的action方法。
-                CallUnit.reCall();
+                //这里继续
+                SingleCall.getInstance().doCall();
                 finish();
             }
         });
