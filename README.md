@@ -5,7 +5,7 @@
 
 典型应用场景：
 
-![](./screen/延迟任务场景.png)
+![](./screen/delay_action.png)
 
 
 那么我们如何实现这种需求呢？请教参我的博客分析[android 登录成功后再跳转到目标界面的思考](http://www.jianshu.com/p/1d0180ec64fb)
@@ -97,35 +97,5 @@ dependencies {
 }
 ```
 
-### 4、小彩蛋
-
-其实libaction工程也实现了注解调用的实现。但是前提是所有的检验模型不需要传入额外的参数才行。 具体看代码
-
-```
-    /**
-     * 通过反射注解来组装(但是这个前提是无参的构造方法才行)
-     *
-     * @param action
-     */
-    public void postCallUnit(Action action) {
-        Class clz = action.getClass();
-        try {
-            Method method = clz.getMethod("call");
-            Interceptor interceptor = method.getAnnotation(Interceptor.class);
-            Class<? extends Valid>[] clzArray = interceptor.value();
-            CallUnit callUnit = new CallUnit(action);
-            for (Class cla : clzArray) {
-                callUnit.addValid((Valid) cla.newInstance());
-            }
-
-            postCallUnit(callUnit);
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
 
 ```
