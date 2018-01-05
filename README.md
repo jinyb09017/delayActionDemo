@@ -12,6 +12,13 @@
 
 
 
+### 添加依赖
+
+```
+compile 'com.abbott.delayaction:delayaction:1.0.0'
+```
+
+
 
 ### 1、基本执行流程图如下
 
@@ -89,13 +96,5 @@ public class LoginValid implements Valid {
 }
 ```
 
-然后要记得依赖我们的lib工程哦
-
-```
-dependencies {
-    compile project(':libaction')
-}
-```
 
 
-```
