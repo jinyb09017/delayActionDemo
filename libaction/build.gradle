@@ -37,7 +37,7 @@ dependencies {
 def siteUrl = 'https://github.com/jinyb09017/delayActionDemo'      // 项目的主页
 def gitUrl = 'https://github.com/jinyb09017/delayActionDemo.git'   // Git仓库的url
 group = "com.abbott.delayaction"                                        // Maven Group ID for the artifact，一般填你唯一的包名
-version = "1.0.0"
+version = "1.0.1"
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -45,9 +45,8 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name '目标方法前置模型设计' 	//项目描述
-//                groupId 'com.kakao.utils'
-//                artifactId 'jinyb'
+                description 'target method delay'
+                name 'libaction' 	//项目描述
                 url siteUrl
                 // Set your license
                 licenses {

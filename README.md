@@ -15,7 +15,8 @@
 ### 添加依赖
 
 ```
-compile 'com.abbott.delayaction:delayaction:1.0.0'
+compile 'com.abbott.delayaction:libaction:1.0.1'
+
 ```
 
 
